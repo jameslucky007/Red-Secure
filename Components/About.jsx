@@ -3,16 +3,16 @@ import React from 'react'
 const About = () => {
   return (
     
-<div className="container aboutcontainer">
+<div className="container aboutcontainer" id='about'>
   <div className="row align-items-center">
   
     {/* Left Side - Image */}
-    <div className="col-12 col-md-6 col-lg-5 text-center">
+    <div className="col-12 col-md-6 col-lg-5 text-center" data-aos="fade-right">
       <img className="aboutimg img-fluid" src="aboutimg.jpg" alt="About Image" />
     </div>
 
     {/* Right Side - Text */}
-    <div className="col-12 col-md-6 col-lg-7 abouttext">
+    <div className="col-12 col-md-6 col-lg-7 abouttext"  data-aos="fade-left">
       <h1> About Us<iconify-icon icon="material-symbols:bolt-outline"></iconify-icon></h1>
       <p>
         Our Integrator company provides solutions in IT, Networking, Security, and Computer Solutions. We have expertise in a wide range of security products. 

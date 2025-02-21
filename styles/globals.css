@@ -1,11 +1,11 @@
-/* -----=====( ALL BODY CSS )=====------ */
 /* -----=====( Google Fonts Links )=====------ */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* For Chrome, Safari, Edge, and Opera */
+/* React foam phone no step up icon remove For Chrome, Safari, Edge, and Opera */
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -24,9 +24,7 @@ input[type="number"]::-webkit-outer-spin-button {
 --text-color: #202020;
 --white-color: #fff;
 --black-color: #000;
---primary-font:'Poppins', sans-serif;
---secondary-font: 'Jost', sans-serif;
---cursive-font: 'Oleo Script Swash Caps', cursive;
+
 }
 
 
@@ -65,7 +63,7 @@ ul,
 ol,
 .row > * {
 margin: 0;
-padding: 0;
+padding: 5px;
 }
 
 ul {
@@ -80,9 +78,20 @@ width: 100vw;
 scroll-behavior: smooth;
 }
 
+#about, #services, #products, #blogs {
+  padding-top: 0px !important;
+}
 
 
-/* Responsive Design */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ------------------- Responsive Code ------------------ */
+/* ------------------- For 992PX ------------------ */
+  /* ----------------- Nav Bar Responsive Code ---------------- */
+
 @media (max-width: 992px) {
   .nav-menu {
     margin-left: 0;
@@ -108,24 +117,53 @@ scroll-behavior: smooth;
   .logo {
     width: 60%;
   }
+
+   /* For Icon Box section */
+
+   .boxstyle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0px !important;
+  }
+
+  .infoicon {
+    width: 45%;
+    margin: 10px;
+  }
+
+  #boxicon {
+    font-size: 60px;
+  }
 }
 
-@media (max-width: 768px) {
 
-  /* ------------------------ Nav Bar Responsive Code ---------------- */
+/* ------------------- For 768PX ------------------ */
+  /* ----------------- Nav Bar Responsive Code ---------------- */
+
+@media (max-width: 768px) {
 
   .nav-menu {
     font-size: 16px;
     padding: 15px 0px;
+    margin-left: 0px !important;
   }
 
   .button-87 {
     font-size: 14px;
   }
 
+  .row > * {
+    margin: 0;
+   
+    }
+
+  
+
+  
+
   
   /* ------------------------ Home Section Responsive Code ---------------- */
-
 
   .logo {
     width: 70%;
@@ -140,8 +178,9 @@ scroll-behavior: smooth;
   }
   
   .homeheadh1 {
-    font-size: 2.5rem !important;
-    line-height: 45px;
+    font-size: 1.6rem !important;
+
+    
   }
   
   .homeparagraph {
@@ -171,12 +210,14 @@ scroll-behavior: smooth;
 
   .abouttext p {
     font-size: 16px;
+    padding: 10px !important;
   }
 
   /* -------------- Mission & Vision ---------- */
+
   .visioncontent {
     text-align: center !important;
-    padding: 20px;
+    padding: 15px;
   }
 
   .visioncontent h1 {
@@ -185,35 +226,184 @@ scroll-behavior: smooth;
 
   .visioncontent p {
     font-size: 16px;
+    padding: 10px !important;
   }
 
   .indparatext {
     margin-top: 50px !important;
+    padding: 0px   10px !important;
+    
 
   }
 
+  .indheadtext {
+    font-size: 1.8rem !important;
+  }
+
+  .servicehead h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .serviceheadtext {
+    font-size: 17px !important;
+    padding: 0px 20px;
+  }
+
+  .cardimage{
+    width: 50% !important;
+  }
+
+  
+.product-header h2 {
+  padding: 5px !important;
+  margin-top: 10px !important;
 }
 
 
+.row-gap {
+  gap: 20px !important;
+  padding: 10px;
+}
+  
+.right-text {
+  font-size: 1.1rem !important;
+}
+
+.footer-end-section h5 {
+  font-size: 1rem !important;
+ 
+}
+
+.product-header h2 {
+  font-size: 1.8rem !important;
+  margin-top: 30px !important;
+  padding-top: 10px !important;
+
+
+}
+
+.blog-content img {
+  width: 100% !important;
+  display: block;
+  padding: 0px 20px !important;
+  margin: 0px !important;
+ 
+
+
+}
+
+.blog-content h2 {
+  padding: 0px 30px !important;
+  margin-top: 40px !important;
+
+
+}
+
+.blog-content p {
+  padding: 30px 30px !important;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-header {
+    font-size: 2rem !important;
+  }
+  .left-container, .right-container {
+    padding: 20px;
+  }
+  .form-label, .right-text {
+    font-size: 1rem;
+  }
+  .contact-icon {
+    font-size: 1.5rem;
+  }
+  .contact-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-header {
+    font-size: 1.5rem;
+  }
+  .form-label, .right-text {
+    font-size: 0.9rem;
+  }
+  .contact-icon {
+    font-size: 1.3rem;
+  }
+  .contact-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .logo {
+    width: 30% !important;
+  }
+}
+
+
+
+
+}
+
+/* ------------------------ For 480px ---------------- */
+
 @media (max-width: 480px) {
 
-      /* ------------------------ Nav Bar Section  Responsive Code for Phone  ---------------- */
+/* ----- Nav Bar Section  Responsive Code for Phone  --------- */
 
   .nav-menu {
-    font-size: 14px;
+    font-size: 12px !important;
+    margin-left: 0px !important;
+
+ 
   }
 
   .button-87 {
     font-size: 13px;
-    padding: 8px 20px;
+    padding: 10px !important;
+    width: 95%;
   }
 
   .logo {
-    width: 80%;
+    width: 30% !important;
   }
 
+  
+.headicon {
+ font-size: 20px !important;
+}
 
-      /* ------------------------ Home Section Responsive Code for Phone ---------------- */
+.cardcontainerindus {
+  margin-top: 30px !important;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)) !important;
+
+}
+
+.indtext2 {
+  font-size: 1rem !important;
+
+}
+
+#indheadicon{
+  font-size:55px !important;
+  padding: 0px 10px !important;
+
+}
+.industriescard{
+  padding: 20px !important;
+}
+
+#indcardicon {
+
+  font-size: 50px !important;
+
+}
+
+/* --------------- Home Section Responsive Code for Phone ----------- */
 
 
 .homebody {
@@ -221,18 +411,18 @@ scroll-behavior: smooth;
 }
 
 .homeheadh5 {
-  font-size: 1.5rem;
+  font-size: 1.8rem !important;
   margin-bottom: 12px;
 }
 
 .homeheadh1 {
-  font-size: 2rem;
-  line-height: 35px;
+  font-size: 1.6rem !important;
   margin-bottom: 12px;
 }
 
 .homeparagraph {
-  font-size: 1.1rem;
+  font-size: 1.2rem !important;
+  margin-left: 5px !important;
 }
 
 .homeimg {
@@ -249,8 +439,6 @@ scroll-behavior: smooth;
 }
 
 .homeheadh1 {
-  font-size: 2rem;
-  line-height: 35px;
   margin-bottom: 12px;
 }
 
@@ -262,16 +450,59 @@ scroll-behavior: smooth;
   max-height: 300px;
 }
 
-/* ------- About US ---------- */
+/* Icon Box Section */
+
+.boxstyle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.infoicon {
+  width: 80%;
+  margin: 10px;
+}
+
+#boxicon {
+  font-size: 50px;
+}
+
+.logo {
+  width: 30% !important;
+  margin: 2px 0px;
+}
+
+.icon-box {
+  padding: 30px !important;
+}
+
+.navdetails {
+  font-size: 0.8rem !important;
+  text-align: center;
+  padding-left: 20px !important ;
+  margin-bottom: 5px;
+  margin-left: 0px !important;
+
+
+}
+
+
+.homeparagraph {
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 1rem;
+}
+
+
+
+
 
 
 }
 
 
 /* ------=====( NAVBAR )=====------  */
-
-
-/* ------=====( UPPER NAVBAR )=====------ */
+/*  UPPER NAVBAR */
 
 .uppernav {
   background: rgb(198,38,61);
@@ -281,8 +512,8 @@ scroll-behavior: smooth;
 .navdetails { 
   color: red; display: flex;
   list-style: none; 
-  font-family: 'Roboto', sans-serif;
-  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
   color: white;
   margin-left: 40px;
   font-size: 15px;
@@ -306,17 +537,17 @@ scroll-behavior: smooth;
   padding: 2px;
 }
 
-/* Main Nav Bar */
+/*-------- Main Nav Bar ----------*/
 
 .logo {
-  width: 40%;
-  margin: 10px 0;
+  width: 35%;
+  margin: 2px 0px;
 }
 
 /* Navbar Background */
 .mainhead {
   background-color: #F7EDEE !important;
-  padding: 10px 0;
+  padding: 2px 0;
 }
 
 /* Navbar Menu */
@@ -339,6 +570,7 @@ scroll-behavior: smooth;
   font-size: 20px;
   color:var(--primary-color);
   transition: color 0.3s ease-in-out;
+
 }
 
 /* Hover Effect: Both Text & Icon Change Color Together */
@@ -364,51 +596,6 @@ scroll-behavior: smooth;
   width: 100%;
 }
 
-/*================= Main Navbar Bar ==================*/
-
-.nav-menu {
-  font-size: 18px;
-  margin-left: 50px;
-  font-family: "Poppins", sans-serif;
-  color: #373737 !important;
-  font-weight: 500 !important;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease-in-out;
-}
-
-/* Navbar Icons */
-.nav-menu .nav-icon {
-  font-size: 20px;
-  color: #4a4a4a;
-  transition: color 0.3s ease-in-out;
-}
-
-/* Hover Effect: Change text and icon color together */
-.nav-menu:hover,
-.nav-menu:hover .nav-icon {
-  color: #D11A5C !important;
-}
-
-/* Underline Effect on Hover */
-.nav-menu::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
-  background-color: #D11A5C;
-  transition: width 0.3s ease-in-out;
-  transform: translateX(-50%);
-}
-
-.nav-menu:hover::after {
-  width: 100%;
-}
 
 /* Navbar Button */
 .button-87 {
@@ -441,12 +628,45 @@ scroll-behavior: smooth;
   transform: scale(0.95);
 }
 
+/* Fixed Navbar on Scroll */
+.mainhead {
+  background-color: #F7EDEE !important;
+  padding: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.mainhead.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(247, 237, 238, 0.95);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+
+
+/* Navbar Hover Effect */
+.nav-menu {
+  cursor: pointer;
+}
+
+/* Adjust for Fixed Navbar */
+#about, #services, #products, #blogs {
+  padding-top: 100px; /* Prevents content from being hidden under the fixed navbar */
+}
+
+
+
 
 /*----------  Home Page CSS --------------- */
-
 .homebody { 
   background-color: var(--third-color);
-  padding: 40px;
+  padding: 60px;
 } 
 
 .hometext {
@@ -470,12 +690,12 @@ scroll-behavior: smooth;
 /* Main Heading */
 .homeheadh1 {
   color: #3d3d3d;
-  font-size:3rem;
+  font-size: 3rem;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 16px;
-  word-wrap: break-word;
-  line-height: 55px;
+  line-height: 48px;
   font-weight: 500;
+  padding: 5px;
 }
 
 /* Paragraph */
@@ -502,40 +722,106 @@ scroll-behavior: smooth;
   100% { transform: translateY(0px); }
 }
 
-
-  /* -----======( ICON BOXES )======----- */
-
-
-  .boxstyle {
-    margin-bottom: 80px;
-    margin-top: 50px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap:10px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .homebody {
+    padding: 40px 20px; /* Reduce padding for smaller screens */
   }
-  
-  
+
+  .homeheadh1 {
+    font-size: 2.5rem; /* Smaller font size for main heading */
+    line-height: 36px; /* Adjust line height */
+  }
+
+  .homeparagraph {
+    font-size: 1.2rem; /* Smaller font size for paragraph */
+  }
+
+  .homeimg {
+    max-height: 300px; /* Reduce max height for images */
+  }
+}
+
+@media (max-width: 576px) {
+  .homeheadh5 {
+    font-size: 1.3rem; 
+    margin-top: 30px;/* Smaller font size for subheading */
+    text-align: center;
+  }
+
+  .homeheadh1 {
+    font-size: 1.8rem; /* Further reduce font size for main heading */
+    text-align: center;
+
+  }
+
+  .homeparagraph {
+    font-size: 0.9rem;
+    margin-bottom: 40px !important; /* Further reduce font size for paragraph */
+    text-align: center;
+
+  }
+
+  .homebody {
+    padding: 22px; /* Further reduce padding for very small screens */
+  }
+}
+/* -----======( ICON BOXES )======----- */
+
+/* Default styles */
+.boxstyle {
+  margin-bottom: 80px;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.infoicon {
+  width: 90%;
+  background-image: linear-gradient(
+    to right top,
+    #ed3b3b,
+    #ed314a,
+    #eb2958,
+    #e82466,
+    #e22373
+  );
+  padding: 20px 0px;
+  box-shadow: rgba(221, 85, 85, 0.387) 0px 7px 29px 0px;
+  border-radius: 30px;
+  text-align: center;
+  margin: 20px;
+}
+
+#boxicon {
+  color: rgb(255, 247, 247);
+  font-size: 80px;
+}
+
+
+
+/* Responsive styles for smartphones */
+@media (max-width: 768px) {
+  .boxstyle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+
   .infoicon {
     width: 100%;
-    background-image: linear-gradient(to right top, #ed3b3b, #ed314a, #eb2958, #e82466, #e22373);
-    padding:20px 0px;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-    text-align: center;
-    margin: 20px;
-  }
-  
-  
-  #boxicon {
-    color: rgb(255, 247, 247);
-    font-size: 80px;
+    margin: 10px auto;
   }
 
+  .col-6 {
+    width: 100% !important;
+  }
+}
 
   
   /* ------======( ABOUT PAGE )======------ */
@@ -552,8 +838,7 @@ scroll-behavior: smooth;
   height: auto;
   border-radius: 10px;
   margin-right: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  box-shadow: rgba(100, 100, 111, 0.327) 0px 7px 29px 0px;}
 
 /* Heading Styling */
 .abouttext h1 {
@@ -570,11 +855,10 @@ scroll-behavior: smooth;
   font-family: 'Lato', sans-serif;
   line-height: 1.8;
   font-size: 18px;
+  padding: 20px;
 }
   
-  
-  /* Mission & Vision Page */
-/* Mission & Vision Section */
+
 /* Mission & Vision Section */
 .visionbox {
   margin-top: 80px;
@@ -599,9 +883,10 @@ scroll-behavior: smooth;
 /* Paragraph */
 .visioncontent p {
   color: #5e5e5e;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", serif;
   line-height: 1.8;
   font-size: 18px;
+  padding: 20px;
 }
 
 /* Image (Default for Large Screens) */
@@ -610,7 +895,7 @@ scroll-behavior: smooth;
   height: auto;
   margin-left: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.327) 0px 7px 29px 0px;
 }
 
 /* Image (Only for Mobile) */
@@ -623,105 +908,7 @@ scroll-behavior: smooth;
 }
 
 
-
-  /* Services */
-
-
-.servicebg {
-  background: linear-gradient( rgb(0 0 0 / 0.6), rgb(0 0 0 /0.5)),
-  url(/serviceimg1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
-
-
-.servicehead {
-  color: white;
-  font-size: 40px;
-  text-align: center;
-}
-
-
-.hrdesign {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-.hrline {
-  height: 2px;
-  background-color: white;
-  display: inline-block;
-  width: 30%;
-}
-
-
-.servicehead h1 {
-  font-size: 40px;
-  margin: 20px 0px;
-}
-
-
-.serviceheadtext {
-  color:#f0f0f0 ;
-  font-family: 'Jost', sans-serif;
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-/* -----=====(SERVICE CARD)=====------ */
-
-
-.cardnamediv {
-  margin: 20px;
-}
-
-
-.cardcontainer{
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  border-bottom: 12px solid rgb(212, 24, 55);
-  text-align: center;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-
-.cardimage {
-  height: 200px;
-}
-
-
-.cardcontent h3 {
-  text-align: center;
-  font-size: 22px;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
-
-
-.cardcontent p {
-  text-align: center;
-  font-family: 'jost', sans-serif;
-  padding: 2px;
-  font-size: 18px;
-}
-
-
-.cardbg {
-  background-color: #e12121;
-  height: 15px;
-  border-radius: 100px 100px 0px 0px;
-}
-
-/* ---- Industries ------*/
+/* ------- Industries ---------*/
 
 .indhrdesign {
   display: flex;
@@ -732,22 +919,24 @@ scroll-behavior: smooth;
 
 #indheadicon{
   color: #f14e50d7;
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
   margin-top: 50px;
+
+
 }
 
 
 #indcardicon {
   color: #f14e50d7;
-  font-size: 70px !important;
+  font-size: 70px ;
   text-align: center;
 }
 
 
 .indheadtext{
   color: #424242;
-  font-size: 25px;
+  font-size: 40px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   margin-top: 50px;
@@ -757,10 +946,11 @@ scroll-behavior: smooth;
 .indparatext {
   color: #5e5e5e;
   font-size: 18px;
-  font-family: 'jost', sans-serif;
+  font-family: "Lato", serif;
   text-align: center;
   margin-bottom: 50px;
   margin-top: 5px;
+  padding: 20px;
 }
 
 
@@ -770,12 +960,13 @@ scroll-behavior: smooth;
   gap: 50px;
   margin-bottom: 150px;
   margin-top: 100px;
+  padding: 15px;
 }
 
 
 .industriescard {
   padding: 35px;
-  box-shadow: 1px 1px 8px -2px rgba(0,0,0,0.5);
+  box-shadow: rgba(100, 100, 111, 0.327) 0px 7px 29px 0px;
   text-align: center;
 }
 
@@ -795,26 +986,139 @@ font-family: 'Poppins', sans-serif;
 }
 
 
+
+/* Service Section Background */
+.servicebg {
+  background: linear-gradient( rgb(0 0 0 / 0.6), rgb(0 0 0 / 0.5)),
+  url(/serviceimg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Header Styling */
+.servicehead {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.hrdesign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hrline {
+  height: 2px;
+  background-color: white;
+  display: inline-block;
+  width: 30%;
+}
+
+.servicehead h1 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.serviceheadtext {
+  color: #f0f0f0;
+  font-family: "Lato", serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* Card Styling */
+.cardnamediv {
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.cardnamediv:hover {
+  transform: translateY(-10px);
+}
+
+.cardcontainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom: 12px solid rgb(212, 24, 55);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardcontainer:hover {
+  transform: scale(1.05);
+}
+
+.cardimage {
+  height: 160px;
+  width: 60%;
+  transition: transform 0.3s ease;
+}
+
+.cardcontent h3 {
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cardcontent p {
+  text-align: center;
+  font-family: "Lato", serif;
+  padding: 2px;
+  font-size: 18px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cardcontainer {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+.cardbg {
+  background-color: #e12121;
+  height: 15px;
+  border-radius: 100px 100px 0 0;
+}
+
+
+
+
 /* -----=====( PRODUCT CARD 1)=====----- */
 
 /* Product Header */
 .product-header {
   text-align: center;
-  padding: 60px 20px 20px;
+  padding: 5px;
 }
 
 .product-header h2 {
   font-family: "Poppins", sans-serif;
   color: #333;
   font-size: 2.5rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .product-header p {
   font-family: "Lato", sans-serif;
   color: #555;
   font-size: 1.2rem;
-  max-width: 700px;
-  margin: 10px auto 50px;
+  margin: 10px auto 40px;
 }
 
 .product-bars {
@@ -826,6 +1130,7 @@ font-family: 'Poppins', sans-serif;
   position: relative;
   background: #fff;
   border: 2px solid var(--primary-color);
+  box-shadow: rgba(100, 100, 111, 0.226) 0px 7px 29px 0px;
   border-radius: 12px;
   padding: 20px;
   display: flex;
@@ -848,7 +1153,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .product-content p {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", serif;
   font-size: 1rem;
   color: #666;
 }
@@ -895,7 +1200,7 @@ font-family: 'Poppins', sans-serif;
 .contact-header {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  color: #333;
+  color:#333333;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -904,22 +1209,26 @@ font-family: 'Poppins', sans-serif;
 .left-container {
   background-color: #ffffff;
   padding: 30px;
-  border-radius: 6px 0px 0 px 6px;
+  border-radius: 6px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 6px 0px 0 px 6px;
-  -moz-border-radius: 6px 0px 0 px 6px;
-  -ms-border-radius: 6px 0px 0 px 6px;
-  -o-border-radius: 6px 0px 0 px 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 .form-label {
   font-size: 1rem;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .form-control {
   font-size: 0.9rem;
   padding: 10px;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .contact-btn {
@@ -941,20 +1250,26 @@ font-family: 'Poppins', sans-serif;
   background: linear-gradient(125deg, rgba(198,38,61,0.9991007145045518) 27%, rgba(209,26,92,1) 61%);
   color: white;
 
+
 }
 
 /* Right Side - Contact Info */
 .right-container {
   background: linear-gradient(125deg, rgba(198, 38, 62, 0.89) 27%, rgba(209, 26, 93, 0.783) 61%);
-  padding: 30px;
+  padding: 15px;
   border-radius: 12px;
   color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-radius: 0px 6px 6px 0px !important;
-  -webkit-border-radius: 0px 6px 6px 0px !important;
-  -moz-border-radius: 0px 6px 6px 0px !important;
-  -ms-border-radius: 0px 6px 6px 0px !important;
-  -o-border-radius: 0px 6px 6px 0px !important;
+  border-radius:6px !important;
+  -webkit-border-radius:6px !important;
+  -moz-border-radius:6px !important;
+  -ms-border-radius:6px !important;
+  -o-border-radius:6px !important;
+}
+
+.right-container p{
+  font-family: 'Poppins', sans-serif;
 }
 
 .container-head {
@@ -972,7 +1287,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .contact-icon {
-  font-size: 2rem;
+  font-size: 2rem !important;
   margin-right: 10px;
 }
 
@@ -981,43 +1296,17 @@ font-family: 'Poppins', sans-serif;
   text-align: start;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact-header {
-    font-size: 1.8rem;
-  }
-  .left-container, .right-container {
-    padding: 20px;
-  }
-  .form-label, .right-text {
-    font-size: 1rem;
-  }
-  .contact-icon {
-    font-size: 1.5rem;
-  }
-  .contact-btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-}
 
-@media (max-width: 576px) {
-  .contact-header {
-    font-size: 1.5rem;
-  }
-  .form-label, .right-text {
-    font-size: 0.9rem;
-  }
-  .contact-icon {
-    font-size: 1.3rem;
-  }
-  .contact-btn {
-    font-size: 0.8rem;
-    padding: 6px 12px;
-  }
-}
 
 /* --------- Blog Section ------- */
+
+.Blog-heading {
+  font-family: 'Poppins', sans-serif;
+  font-family: 40px;
+  text-align: center;
+  padding: 25px;
+}
+
 .card-title {
  font-family: 'Poppins', sans-serif;
 }
@@ -1034,9 +1323,48 @@ font-family: 'Poppins', sans-serif;
   background: white;
   padding: 30px;
   margin-top: -50px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.327) 0px 7px 29px 0px;
   border-radius: 8px;
 }
+
+.blog-footer {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.blog-footer a {
+  color: #FA898B;
+  text-decoration: underline;
+
+}
+
+.blog-content h2{
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  align-items: start;
+  font-size: 1.6rem;
+
+}
+
+.blog-content p{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  align-items: start;
+  padding: 10px;
+  line-height: px;
+
+}
+
+.blog-content img {
+  width: 60%;
+  margin: 40px 0px;
+  padding: 10px;
+}
+
+
+
+/* Footer Section */
+
 .footer-section {
   border-top: 2px solid #ddd;
   margin-top: 20px;
@@ -1074,3 +1402,48 @@ font-family: 'Poppins', sans-serif;
 }
 
 
+/*  thank you section  */
+
+.thank-you-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e9ecef 100%);
+}
+
+.thank-you-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.thank-you-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.check-icon {
+  width: 80px;
+  height: 80px;
+  background: #198754;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #D11A5C, rgb(208, 38, 32));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 10px 0px ;
+}
+
+#submit-card-btn {
+ width: 100%;
+}
+
+#massage {
+background: #F7EDEE;
+}

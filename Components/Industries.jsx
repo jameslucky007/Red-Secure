@@ -23,7 +23,7 @@ const Industries = () => {
 {/* ------======( INDUSTRIES CARD )======------- */}
 
 
-<div className='container'>
+<div className='container'  data-aos="zoom-in-up">
 <div className='cardcontainerindus'>
 
 

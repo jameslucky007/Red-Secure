@@ -6,7 +6,7 @@ const Products = () => {
     <>
 
       {/* Product Header Section */}
-      <section className="product-header">
+      <section className="product-header" id='products'>
         <div className="container">
           <div className="row text-center">
             <div className="col-lg-12">
@@ -24,11 +24,11 @@ const Products = () => {
       </section>
 
       {/* Product Card Section */}
-      <div className="container">
+      <div className="container" data-aos="zoom-in-up">
         <div className="row justify-content-center row-gap">
           <div className="col-lg-5 col-md-6 col-sm-12 mb-4">
             <div className="product-card">
-              <img className="product-img" src="/firewall-2.png" alt="Product" />
+              <img className="product-img" src="/sd wan.png" alt="Product" />
               <div className="product-content">
                 <h3>Next Gen SD-WAN</h3>
                 <p>
@@ -40,7 +40,7 @@ const Products = () => {
 
           <div className="col-lg-5 col-md-6 col-sm-12 mb-4">
             <div className="product-card">
-              <img className="product-img" src="/product.svg" alt="Product" />
+              <img className="product-img" src="/secure-mail.svg" alt="Product" />
               <div className="product-content">
                 <h3>Email Security Solutions</h3>
                 <p>A mail security product safeguards email channels from threats like phishing attacks. Cybercriminals often use deceptive emails to trick users into revealing sensitive information. By detecting, filtering, and blocking malicious messages, it helps prevent unauthorized access, ensuring secure communication and data protection </p>
@@ -52,7 +52,7 @@ const Products = () => {
       </div>
 
       {/* Row 2 */}
-      <div className="container">
+      <div className="container" data-aos="zoom-in-up">
         <div className="row justify-content-center row-gap">
           <div className="col-lg-5 col-md-6 col-sm-12 mb-4">
             <div className="product-card">
@@ -67,7 +67,7 @@ const Products = () => {
 
           <div className="col-lg-5 col-md-6 col-sm-12 ">
             <div className="product-card">
-              <img className="product-img" src="/product.svg" alt="Product" />
+              <img className="product-img" src="/patch management.svg" alt="Product" />
               <div className="product-content">
                 <h3>Patch Management Solutions</h3>
 
@@ -80,11 +80,11 @@ const Products = () => {
       </div>
 
       {/* Row 3 */}
-      <div className="container mb-5">
+      <div className="container mb-5" data-aos="zoom-in-up">
         <div className="row justify-content-center row-gap">
           <div className="col-lg-5 col-md-6 col-sm-12 mb-4">
             <div className="product-card">
-              <img className="product-img" src="/product.svg" alt="Product" />
+              <img className="product-img" src="firewall-2.png" alt="Product" />
               <div className="product-content">
                 <h3>Next Generation Firewall & UTM</h3>
                 <p>Our Enhanced Firewall Solution offers intrusion prevention and application intelligence for robust network security. In contrast, Unified Threat Management (UTM) systems go further by integrating email security, URL filtering, wireless security, web application firewalls, and virtual private networks (VPNs) for comprehensive protection  </p>

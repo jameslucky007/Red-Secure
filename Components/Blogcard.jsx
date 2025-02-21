@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -5,7 +6,7 @@ import "swiper/css/autoplay";
 import Link from "next/link";
 import { Autoplay } from "swiper/modules";
 
-const Blog = () => {
+const Blogcard = () => {
   const blogs = [
     {
       title: "Red Secure VAPT Services",
@@ -31,11 +32,17 @@ const Blog = () => {
       image: "/Cyber-crime.jpg",
       slug: "cybersecurity-awareness",
     },
+    {
+      title: "Only Attacks Can Help You Avoid Attacks!",
+      description: "The latest reports reveal that the overall number of data breaches (1,862).",
+      image: "/Cyber-security.jpg",
+      slug: "Avoid-Attacks",
+    },
   ];
 
   return (
-    <div className="container mt-5 mb-5">
-      <h2 className="text-center mb-4">Latest Blogs</h2>
+    <div className="container mb-5" id="blogs">
+      <h2 className="Blog-heading">Latest Blogs</h2>
       <Swiper
         slidesPerView={1}
         spaceBetween={20}
@@ -50,18 +57,18 @@ const Blog = () => {
         {blogs.map((blog, index) => (
           <SwiperSlide key={index}>
             <div className="card shadow-sm">
-              {/* Blog Image */}
+             
               <img src={blog.image} className="card-img-top" alt={blog.title} />
 
-              {/* Blog Content */}
+       
               <div className="card-body">
                 <h5 className="card-title">{blog.title}</h5>
                 <p className="card-text">{blog.description}</p>
               </div>
 
-              {/* Read More Button (Above Image) */}
+          
               <div className="text-start m-2 p-2">
-                <Link href={`pages/Blog.js`} passHref>
+                <Link href={`/blog#${blog.slug}`} passHref>
                   <button className="contact-btn">Read More</button>
                 </Link>
               </div>
@@ -73,4 +80,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Blogcard;

@@ -1,24 +1,27 @@
 import React from 'react'
+import { FaCaretRight,FaCaretLeft  } from "react-icons/fa";
+import Link from 'next/link';
 
 
 const Contact = () => {
   return (
 <>
  {/*  Contact Us Page  Section */}
- <div className="contact-body" id="contact">
-  <div className="container">
-    <h2 className="contact-header">Contact Us for More Information</h2>
+ <div className="contact-body" id="contact" >
+  <div className="container"  data-aos="flip-left">
+    <h2 className="contact-header"> <FaCaretLeft  className="product-bars"/>
+    Contact Us <FaCaretRight  className="product-bars" /></h2>
     <div className="row">
       {/* Left Side - Contact Form */}
       <div className="col-lg-7 col-md-6 col-sm-12">
         <div className="left-container">
-          <form>
+          <form  action={'/thank-you'} name='contact' method='POST' data-netlify='true' >
             <input type="hidden" name="subject" value="You got a new message" />
             <input type="hidden" name="form-name" value="contact" />
 
             <div className="mb-3">
               <label className="form-label">Name:</label>
-              <input type="text" name="name" className="form-control" placeholder="Full Name" required />
+              <input type="text" name="full-name" className="form-control" placeholder="Full Name" required />
             </div>
 
             <div className="mb-3">
@@ -56,17 +59,18 @@ const Contact = () => {
             <h3 className="right-text">Phone No: +971 50 948 3857,   +971 43 426 284</h3>
           </div>
 
+<Link href="mailto:Sales@redsecureme.com"> 
           <div className="list-icon">
             <iconify-icon icon="mdi:email-outline" className="contact-icon"></iconify-icon>
             <h3 className="right-text">Email: Sales@redsecureme.com</h3>
-          </div>
+          </div></Link>
 
           <div className="list-icon">
             <iconify-icon icon="mdi:question-mark" className="contact-icon"></iconify-icon>
             <h3 className="right-text">Have Questions? Contact Us!</h3>
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consectetur quidem voluptatum.</p>
+          <p>Feel free to reach out! We're here to assist you with any inquiries or support.</p>
         </div>
       </div>
     </div>
@@ -79,3 +83,6 @@ const Contact = () => {
 }
 
 export default Contact
+
+
+ 
