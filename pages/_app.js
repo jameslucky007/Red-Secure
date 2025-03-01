@@ -1,4 +1,6 @@
 import '@/styles/globals.css'
+import '@/styles/responsive.css'
+import '@/styles/boiler.css'
 import Script from 'next/script'
 import AOS from 'aos'
 import 'aos/dist/aos.css';

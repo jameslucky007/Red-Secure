@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build" ,
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@iconify/icons-mdi": "^1.2.48",
     "@iconify/react": "^5.2.0",
     "aos": "^2.3.4",

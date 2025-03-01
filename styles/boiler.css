@@ -1,0 +1,92 @@
+/* -----=====( Google Fonts Links )=====------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* React foam phone no step up icon remove For Chrome, Safari, Edge, and Opera */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =============== Global Styles =============== */
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+/* -----=====( variable define )=====----- */
+
+
+:root {
+--primary-color:#D11A5C ;
+--secondary-color: #424242;
+--third-color: #F7EDEE;
+--text-color: #202020;
+--white-color: #fff;
+--black-color: #000;
+
+}
+
+
+/* -----=====( Boiler Plate CSS )=====------ */
+
+
+*,
+*:after,
+*::before {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+
+a {
+text-decoration: none;
+color: unset;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+ul,
+ol,
+.row > * {
+margin: 0;
+padding: 5px;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+html, body {
+overflow-x: hidden ;
+width: 100vw;
+scroll-behavior: smooth;
+}
+
+#about, #services, #products, #blogs {
+  padding-top: 0px !important;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
