@@ -1,31 +1,44 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import {  FaPhone,  FaEnvelope,  FaFacebookSquare,  FaInstagram,  FaLinkedin,  FaHome,  FaUser,  FaCartPlus,  FaBox,  FaBlogger,} from "react-icons/fa";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import {  
+  FaPhone, FaEnvelope, FaFacebookSquare, FaInstagram, FaLinkedin, 
+  FaHome, FaUser, FaCartPlus, FaBox, FaBlogger 
+} from "react-icons/fa";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
-  const route = useRouter() // Detect Scroll to 
-console.log(route);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth Scroll Function
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".navbar")) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
+  // Smooth scroll function
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
+      setIsMenuOpen(false); // Close menu on click
       window.scrollTo({
         top: element.offsetTop - 80, // Adjust for navbar height
         behavior: "smooth",
@@ -33,28 +46,14 @@ console.log(route);
     }
   };
 
-  const navigateHandler = (originPath, destinationPath) =>{
-    if(route.pathname === originPath){
-      route.push("/").then(() => {
-        scrollToSection(destinationPath);
-      });
-    }else{
-      scrollToSection("products")
-    }
-  }
-
-
-const iDNavHandler = (destinationPath)=>{
-  if(route.pathname === '/blog#red-secure-vapt-services' || '/blog#cyber-security-vapt-infra' || '/blog#best-security-practices' || '/blog#cybersecurity-awareness' || '/blog#Avoid-Attacks'){
-    route.push("/").then(() => {
+  // Function to handle internal navigation
+  const navigateHandler = (destinationPath) => {
+    if (window.location.pathname === "/") {
       scrollToSection(destinationPath);
-    });
-  }else{
-    scrollToSection(destinationPath)
-  }
-}
-
-
+    } else {
+      router.push("/").then(() => scrollToSection(destinationPath));
+    }
+  };
 
   return (
     <>
@@ -64,99 +63,100 @@ const iDNavHandler = (destinationPath)=>{
           <div className="row align-items-center justify-content-between">
             {/* Social Icons */}
             <div className="col-md-3 col-12 text-center text-md-start mb-2 mb-md-0">
-              <a
-                href="https://www.facebook.com/redsecureme/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebookSquare className="headicon" />
-              </a>
-              <a
-                href="https://www.instagram.com/redsecureme/?igshid=YmMyMTA2M2Y%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className="headicon" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/redsecure-middle-east-llc/about/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="headicon" />
-              </a>
+              <div className="social-icons">
+                <a href="https://www.facebook.com/redsecureme/" target="_blank" rel="noopener noreferrer">
+                  <FaFacebookSquare className="headicon" />
+                </a>
+                <a href="https://www.instagram.com/redsecureme/" target="_blank" rel="noopener noreferrer">
+                  <FaInstagram className="headicon" />
+                </a>
+                <a href="https://www.linkedin.com/company/redsecure-middle-east-llc/about/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="headicon" />
+                </a>
+              </div>
             </div>
 
             {/* Contact Info */}
             <div className="col-md-4 col-12 text-center text-md-end mb-2 mt-2">
               <ul className="navdetails">
-                <Link href="https://wa.link/w6i1nj">
-                  <li className="navlist">
+                <li className="navlist">
+                  <a href="https://wa.link/w6i1nj">
                     <FaPhone /> | +971 50 948 3857
-                  </li>
-                </Link>
-                <Link href="mailto:Sales@redsecureme.com">
-                  <li className="navlist">
+                  </a>
+                </li>
+                <li className="navlist">
+                  <a href="mailto:Sales@redsecureme.com">
                     <FaEnvelope /> | Sales@redsecureme.com
-                  </li>
-                </Link>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ------------ Main Nav Bar ---------------- */}
-      <nav   className={`navbar navbar-expand-lg mainhead ms-auto ${isScrolled ? "scrolled" : ""}`}>
+      {/* Main Nav Bar */}
+      <nav className={`navbar navbar-expand-lg mainhead ms-auto ${isScrolled ? "scrolled" : ""}`}>
         <div className="container">
-          <Link href="/">
-            <img className="logo ms-2" src="logo.png" alt="Logo" />
+          <Link href="/" passHref>
+            <Image
+              className="logo ms-2 img-fluid"
+              src="/logo.webp"  
+              alt="Logo"
+              width={120}  
+              height={50}  
+              priority  
+            />
           </Link>
 
-          {/* Toggle Button for Mobile */}
+          {/* Hamburger Button with Animation */}
           <button
-            className="navbar-toggler ms-auto"
+            className={`navbar-toggler ms-auto ${isMenuOpen ? "open" : ""}`}
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
           </button>
 
           {/* Navbar Links */}
-          <div className="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+          <div className={`collapse navbar-collapse ms-auto ${isMenuOpen ? "show" : ""}`} id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 allnav">
-            <li className="nav-item">
-  <Link href="/" className="nav-link nav-menu"><FaHome className="nav-icon" /> Home </Link>
-</li>
               <li className="nav-item">
-                <a className="nav-link nav-menu" onClick={() =>  iDNavHandler('about')}>
+                <Link href="/" className="nav-link nav-menu" onClick={() => navigateHandler("Home")}>
+                  <FaHome className="nav-icon" /> Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/#about" className="nav-link nav-menu" onClick={() => navigateHandler("about")}>
                   <FaUser className="nav-icon" /> About
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link nav-menu" onClick={() =>  iDNavHandler('services')}>
+                <Link href="/#services" className="nav-link nav-menu" onClick={() => navigateHandler("services")}>
                   <FaCartPlus className="nav-icon" /> Services
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link nav-menu" onClick={()=> navigateHandler('/blog', 'products')}>
+                <Link href="/#products" className="nav-link nav-menu" onClick={() => navigateHandler("products")}>
                   <FaBox className="nav-icon" /> Products
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link nav-menu" onClick={() => iDNavHandler('blogs')}>
+                <Link href="/#blogs" className="nav-link nav-menu" onClick={() => navigateHandler("blogs")}>
                   <FaBlogger className="nav-icon" /> Blogs
-                </a>
+                </Link>
               </li>
             </ul>
 
             {/* Contact Button */}
-            <a onClick={() => iDNavHandler('contact')}>  <button className="button-87">Contact</button></a>  
-              </div>
+            <Link href="/#contact">
+              <button className="button-87">Contact</button>
+            </Link>
+          </div>
         </div>
       </nav>
     </>

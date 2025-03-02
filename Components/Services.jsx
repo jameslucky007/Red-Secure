@@ -11,7 +11,7 @@ const Services = () => {
         <div className='servicehead'>
           <div className='hrdesign'>
             <span className='hrline'></span>
-            <h1>Services</h1>
+            <h2>Services</h2> {/* Changed from h1 to h2 for accessibility */}
             <span className='hrline'></span>
           </div>
           <p className='serviceheadtext'>
@@ -87,7 +87,7 @@ const Services = () => {
                           <img className='cardimage' src={imgSrc} alt={title} />
                         </div>
                         <div className='cardcontent'>
-                          <h3>{title}</h3>
+                          <h3>{title}</h3> {/* Service titles are now h3 for proper order */}
                           <p>{text}</p>
                         </div>
                       </div>
