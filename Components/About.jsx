@@ -6,15 +6,18 @@ const About = () => {
     <div className="container aboutcontainer" id="about">
       <div className="row align-items-center">
       
-        {/* Left Side - Optimized Image */}
-        <div className="col-12 col-md-6 col-lg-5 text-center" data-aos="fade-right">
+   {/* Left Side - Centered Image */}
+   <div
+          className="col-12 col-md-6 col-lg-5 d-flex justify-content-center"
+          data-aos="fade-right"
+        >
           <Image
-            className="aboutimg img-fluid"
-            src="/aboutimg.webp"  // Use WebP format
+            className="aboutimg"
+            src="/aboutimg.webp"
             alt="About Image"
-            width={400}  // Set exact width
-            height={400} // Set exact height
-            priority  // Loads image faster for above-the-fold content
+            width={800}
+            height={400}
+            priority
           />
         </div>
 

@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="container">
           <div className="row align-items-center justify-content-between">
             {/* Social Icons */}
-            <div className="col-md-3 col-12 text-center text-md-start mb-2 mb-md-0">
+            <div className="col-md-3 col-12 text-center text-md-start mb-md-0">
               <div className="social-icons">
                 <a href="https://www.facebook.com/redsecureme/" target="_blank" rel="noopener noreferrer">
                   <FaFacebookSquare className="headicon" />
@@ -77,7 +77,7 @@ const Navbar = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="col-md-4 col-12 text-center text-md-end mb-2 mt-2">
+            <div className="col-md-4 col-12 text-md-end mb-2 mt-2">
               <ul className="navdetails">
                 <li className="navlist">
                   <a href="https://wa.link/w6i1nj">

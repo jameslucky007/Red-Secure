@@ -22,27 +22,27 @@
     .logo {
       width: 60%;
     }
-  
-    /* Icon Box section */
-    .boxstyle {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 0px !important;
-    }
-  
-    .infoicon {
-      width: 45%;
-      margin: 10px;
-    }
-  
-    #boxicon {
-      font-size: 60px;
-    }
+
   }
   
   /* ------------------- For 768PX ------------------ */
   @media (max-width: 768px) {
+
+    .mainhead .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Ensures logo & hamburger are in one row */
+    }
+  
+    .navbar-toggler {
+      margin-left: auto; /* Pushes it to the right */
+    }
+  
+    .logo {
+      width: 50% !important;
+      max-width: 200px; /* Ensures logo doesn't take too much space */
+    }
+    
     .nav-menu {
       font-size: 16px;
       padding: 15px 0px;
@@ -138,6 +138,23 @@
     .logo {
       width: 30% !important;
     }
+    .boxstyle {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      gap: 20px;
+      justify-content: center;
+    }
+  
+    .infoicon {
+      width: 100%;
+      margin: 10px auto;
+    }
+  
+    .col-6 {
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+    }
   }
   
   /* ------------------- For 480px ------------------ */
@@ -157,7 +174,7 @@
     }
   
     .headicon {
-      font-size: 20px !important;
+      font-size: 1.5rem !important;
     }
   
     .industriescard {
@@ -182,20 +199,19 @@
       padding: 0px !important;
       margin: 0px !important;
     }
-  
     .boxstyle {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      gap: 15px; /* Reduce gap for smaller screens */
+      padding: 10px;
     }
   
     .infoicon {
-      width: 80%;
-      margin: 10px;
+      padding: 15px 0px; /* Adjust padding */
+      border-radius: 20px; /* Maintain design */
     }
   
     #boxicon {
-      font-size: 50px;
+      font-size: 60px; /* Adjust icon size */
     }
   
     .icon-box {
@@ -205,8 +221,8 @@
     .navdetails {
       font-size: 0.8rem !important;
       text-align: center;
-      padding-left: 20px !important;
-      margin-bottom: 5px;
+     margin-left: 18px;
+     padding: 5px;
     }
 
     .cardcontainerindus {
@@ -226,5 +242,42 @@
         padding: 15px ;
     }
 
+    .navlist {
+      margin-left: 0px !important;
+      margin-top: 0px !important ;
+
+    }
+
 
   }
+
+  @media (min-width: 451px) and (max-width: 768px) {
+    .boxstyle {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .infoicon {
+      flex: 1; /* Distributes icons evenly */
+      max-width: 22%; /* Ensure they fit in one row */
+      text-align: center;
+      padding: 20px;
+    }
+  }
+  @media (max-width: 1400px) {
+    .navdetails {
+      display: flex;
+      flex-wrap: nowrap; /* Prevents wrapping */
+      justify-content: center; /* Centers items */
+      align-items: center;
+      gap: 15px; /* Adjust spacing */
+    }
+  
+    .navlist {
+      white-space: nowrap; /* Prevents breaking into a new line */
+    }
+  }
+  

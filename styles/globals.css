@@ -18,10 +18,12 @@
 
 .navlist {
   margin-right: 18px;
+  margin-left: 0px;
 }
 
 .uppericon {
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -345,25 +347,6 @@
 
 
 
-/* Responsive styles for smartphones */
-@media (max-width: 768px) {
-  .boxstyle {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-  }
-
-  .infoicon {
-    width: 100%;
-    margin: 10px auto;
-  }
-
-  .col-6 {
-    width: 100% !important;
-  }
-}
-
   
   /* ------======( ABOUT PAGE )======------ */
   
@@ -375,11 +358,13 @@
 
 /* Image Styling */
 .aboutimg {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
-  margin-right: 40px;
-  box-shadow: rgba(100, 100, 111, 0.327) 0px 7px 29px 0px;}
+  box-shadow: rgba(100, 100, 111, 0.327) 0px 7px 29px 0px;
+  display: block; /* Ensures it behaves as a block element */
+  margin: 0 auto; /* Centers the image */
+}
 
 /* Heading Styling */
 .abouttext h1 {
