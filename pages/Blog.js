@@ -4,7 +4,7 @@ import { FaGripLinesVertical, FaBraille } from "react-icons/fa";
 import Palavi from "@/Components/Palavi";
 import Head from "next/head";
 
-const Blog = () => {
+const blog = () => {
   return (
     <>
     <Head>
@@ -17,11 +17,8 @@ const Blog = () => {
       <section className="product-header" id="products">
         <div className="container">
           <div className="row text-center">
-            <div className="col-lg-12">
-              <h2>
-                <FaBraille className="product-bars me-5" /> Our Latest Blogs{" "}
-                <FaBraille className="product-bars ms-5" />
-              </h2>
+            <div className="col-lg-12 ">
+              <h3 className="head">  Our Latest Blogs{" "}      </h3>
             </div>
           </div>
         </div>
@@ -163,4 +160,4 @@ Red Team Assessment Services
   );
 };
 
-export default Blog;
+export default blog;

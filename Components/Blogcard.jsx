@@ -11,7 +11,7 @@ const Blogcard = () => {
   const blogs = [
     {
       title: "Red Secure VAPT & Cybersecurity Services",
-      description: " Cyber criminals are continuously targeting enterprise applications, mobile applications and APIs. ",
+      description: "Cyber criminals are continuously targeting enterprise applications, mobile applications and APIs.",
       image: "/vapt.jpg",
       slug: "red-secure-vapt-services",
     },
@@ -58,23 +58,20 @@ const Blogcard = () => {
         {blogs.map((blog, index) => (
           <SwiperSlide key={index}>
             <div className="card shadow-sm">
-              {/* Using next/image for better optimization */}
               <Image
                 src={blog.image}
-                width={400} 
-                height={250} 
+                width={400}
+                height={250}
                 className="card-img-top"
                 alt={blog.title}
-                unoptimized // Needed for static exports
+                unoptimized
               />
-
               <div className="card-body">
                 <h5 className="card-title">{blog.title}</h5>
                 <p className="card-text">{blog.description}</p>
               </div>
-
               <div className="text-start m-2 p-2">
-                <Link href={`/blog/${blog.slug}`} passHref>
+                <Link href={`/blog#${blog.slug}`} passHref>
                   <button className="contact-btn">Read More</button>
                 </Link>
               </div>

@@ -44,14 +44,17 @@ const Navbar = () => {
         behavior: "smooth",
       });
     }
+  
   };
 
   // Function to handle internal navigation
   const navigateHandler = (destinationPath) => {
     if (window.location.pathname === "/") {
       scrollToSection(destinationPath);
-    } else {
-      router.push("/").then(() => scrollToSection(destinationPath));
+    } 
+    else {
+      router.push("/", { scroll: false }); // Page reload pe default scrolling disable karega
+      setTimeout(() => scrollToSection(destinationPath), 100); // Navigation ke baad scroll karega
     }
   };
 
