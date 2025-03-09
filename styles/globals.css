@@ -367,12 +367,13 @@
 }
 
 /* Heading Styling */
-.abouttext h1 {
+.abouttext h2 {
   color: #ce061e;
   font-family: 'Poppins', sans-serif;
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 15px;
+  padding-left: 18px;
 }
 
 /* Paragraph Styling */
@@ -404,6 +405,7 @@
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 /* Paragraph */
